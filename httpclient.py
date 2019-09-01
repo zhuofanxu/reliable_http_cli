@@ -68,6 +68,8 @@ class HttpClient:
             print("尝试了{}次请求依然失败".format(has_request_times + 1))
         else:
             print("尝试了{}次请求成功".format(has_request_times + 1))
+
+        self.session.close()
         return data
 
     def post(self, url):
